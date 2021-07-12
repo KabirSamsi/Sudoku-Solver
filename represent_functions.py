@@ -1,11 +1,4 @@
-def half_represent(mat):
-    final = ""
-    for arr in mat:
-        final += f'{arr} '
-        final += " " * (9-len(arr))
-    return final.rstrip()
-
-def string_represent(mat):
+def string_represent(mat): #Represent row of ints/arrs as a proper string
     final = ""
     for x in range(len(mat)):
         arr = mat[x]

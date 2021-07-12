@@ -29,23 +29,23 @@ def legal_square(number, grid, indices): #Check if number's position is legal in
                 return False
     return True
 
-def check_unique_vertical(number, grid, column):
+def check_unique_vertical(number, grid, column): #Checks if a given element is unique in its column
     for row in grid:
         if number in row[column]:
             return False
     return True
 
-def check_unique_horizontal(number, grid, row):
+def check_unique_horizontal(number, grid, row): #Checks if a given element is unique in its row
     for cell in grid[row]:
         if number in cell:
             return False
     return True
 
-def check_unique_square(number, grid, indices):
-    start = (floor(indices[0]/3)*3, floor(indices[1]/3)*3) #Tuple stores starting coordinate based on rounding index coordinate down
-    for x in range(3): #Iterate through the inner grid
+def check_unique_square(number, grid, indices): #Checks if a given element is unique in its inner square
+    start = (floor(indices[0]/3)*3, floor(indices[1]/3)*3)
+    for x in range(3):
         for y in range(3):
-            cell = grid[start[0]+x][start[1]+y] #Stores the position within the grid
+            cell = grid[start[0]+x][start[1]+y]
             if number in cell:
                 return False
     return True
