@@ -3,5 +3,4 @@
 
 ## Libraries
 - Numpy (Utilized for arange function)
-- Time (Utilized for visual latency creation)
 - Math (Used for rounding in coordinate analysis)

@@ -2,7 +2,6 @@
 from evaluate_functions import check_solved, legal_vertical, legal_horizontal, legal_square, check_unique_vertical, check_unique_horizontal, check_unique_square
 from represent_functions import string_represent
 import numpy as np
-import time
 
 def sudoku_file(filename): #Open sudoku csv file and represent as matrix grid
     with open(filename) as file:
@@ -18,7 +17,7 @@ def sudoku_file(filename): #Open sudoku csv file and represent as matrix grid
                     grid[-1][-1] = [int(cell)]
     return grid #Return formatted grid
 
-grid = sudoku_file("Sudokus/sudoku3.txt")
+grid = sudoku_file("Sudokus/sudoku5.txt")
 #Print out initial grid
 print(f'INITIAL SUDOKU ({round(check_solved(grid)*100, 2)}% Solved)')
 for x in range(len(grid)):
@@ -30,7 +29,6 @@ print('')
 
 while not check_solved(grid) == 1: #Continue replacing elements until grid is completely solved
     solved = check_solved(grid)
-    time.sleep(0.5) #Visual latency creator
     print(f"\nPercent Solved: {round(check_solved(grid)*100, 2)}%")
 
     for x in range(len(grid)):
