@@ -1,4 +1,4 @@
-# Sudoku-Solver
+# Sudoku Solver
 ### Solves sudokus read from .txt or .csv files
 
 ## Libraries
